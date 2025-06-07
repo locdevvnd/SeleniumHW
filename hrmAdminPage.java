@@ -4,15 +4,12 @@ public class hrmAdminPage {
     public static WebDriver driver;
 
     public static void main(String[] args) {
-        // Cài đặt ChromeDriver tự động
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
-        // 1. Truy cập vào: https://opensource-demo.orangehrmlive.com/
         driver.get("https://opensource-demo.orangehrmlive.com/");
         driver.manage().window().maximize();
 
-        // Đợi 2 giây để trang load
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -48,7 +45,6 @@ public class hrmAdminPage {
         // 6. Click nút Login
         loginButton.click();
 
-        // Đợi 2 giây để trang load sau khi đăng nhập
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
